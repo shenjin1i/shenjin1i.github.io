@@ -1,0 +1,60 @@
+<html>
+<head>
+<meta charset="utf-8" />
+
+</head>
+<body>
+<ul>
+<li>
+<a href="javascript:popUp('http://www.baidu.com/');">伪协议调用popUp()函数</a>
+</li>
+<li>
+<a href="#" onclick="popUp('http://www.baidu.com/');return false">内嵌的事件处理函数</a>
+</li>
+<li>
+<a href="http://www.4399.com/" class="popup">分离Javascript</a>
+</li>
+</ul>
+<script type="text/javascript" src="5.js"></script>
+</body>
+</html>
+
+
+
+function popUp(winURL){
+	window.open(winURL,"popup","width=1000,height=1000");
+}
+window.onload = prepareLinks;
+function prepareLinks(){
+	if(!document.getElementsByTagName) return false;
+	var links = document.getElementsByTagName("a");
+	for(var i=0;i<links.length;i++){
+		if(links[i].getAttribute("class") == "popup"){
+			links[i].onclick = function(){
+				popUp(this.getAttribute("href"));
+				return false;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>shenjin1i</title>
+	</head>
+	<body>
+		<h1>沈金利</h1>
+		<ul>
+		<li><a href="work4.html">第四章作业</a></li>
+		<li><a href="work5.html">第五章作业</a></li>
+		</ul>	
+	</body>
+</html>
