@@ -6,13 +6,13 @@
 <body>
 <ul>
 <li>
-<a href="javascript:popUp('http://www.baidu.com/');">Î±Ğ­Òéµ÷ÓÃpopUp()º¯Êı</a>
+<a href="javascript:popUp('http://www.baidu.com/');">ä¼ªåè®®è°ƒç”¨popUp()å‡½æ•°</a>
 </li>
 <li>
-<a href="#" onclick="popUp('http://www.baidu.com/');return false">ÄÚÇ¶µÄÊÂ¼ş´¦Àíº¯Êı</a>
+<a href="#" onclick="popUp('http://www.baidu.com/');return false">å†…åµŒçš„äº‹ä»¶å¤„ç†å‡½æ•°</a>
 </li>
 <li>
-<a href="http://www.4399.com/" class="popup">·ÖÀëJavascript</a>
+<a href="http://www.4399.com/" class="popup">åˆ†ç¦»Javascript</a>
 </li>
 </ul>
 <script type="text/javascript" src="5.js"></script>
@@ -21,40 +21,6 @@
 
 
 
-function popUp(winURL){
-	window.open(winURL,"popup","width=1000,height=1000");
-}
-window.onload = prepareLinks;
-function prepareLinks(){
-	if(!document.getElementsByTagName) return false;
-	var links = document.getElementsByTagName("a");
-	for(var i=0;i<links.length;i++){
-		if(links[i].getAttribute("class") == "popup"){
-			links[i].onclick = function(){
-				popUp(this.getAttribute("href"));
-				return false;
-			}
-		}
-	}
-}
 
 
 
-
-
-
-
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<title>shenjin1i</title>
-	</head>
-	<body>
-		<h1>Éò½ğÀû</h1>
-		<ul>
-		<li><a href="work4.html">µÚËÄÕÂ×÷Òµ</a></li>
-		<li><a href="work5.html">µÚÎåÕÂ×÷Òµ</a></li>
-		</ul>	
-	</body>
-</html>
