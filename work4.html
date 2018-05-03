@@ -1,0 +1,23 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title>Shenjin1i</title>
+	</head>
+	<body>
+		<ul>
+			<li><a href="img/fj01.png" onclick="showPic(this); return false;" title="aaa">AAA</a></li>
+			<li><a href="img/fj02.png" onclick="showPic(this); return false;" title="bbb">BBB</a></li>
+			<li><a href="img/fj03.png" onclick="showPic(this); return false;" title="ccc">CCC</a></li>
+			<li><a href="img/fj04.png" onclick="showPic(this); return false;" title="ddd">DDD</a></li>
+		</ul>
+		<img id="placeholder" src="img/IMG.png" alt="My img"  />
+		<script>
+			function showPic(whichpic){
+				var source = whichpic.getAttribute("href");
+				var placeholder = document.getElementById("placeholder");
+				placeholder.setAttribute("src",source);
+			}
+		</script>
+	</body>
+</html>
